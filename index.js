@@ -14,11 +14,6 @@ const file = require('./lib/file')
 const query = require('./lib/query')
 
 module.exports = {
-
-  // define a single query based on the passed sql string
-  defineQuery: function (sql) {
-    return query.makeQuery(sql)
-  },
   // define multiple queries based on a single file
   loadQueries: function (filePath) {
     const queries = file.parseFile(filePath)
